@@ -1,0 +1,21 @@
+---
+layout: post
+---
+<ul class="posts-list">
+
+    {% assign category = page.category | default: page.title %}
+    {{ post.date | date: "%B %d, %Y" }}
+    {% for post in site.categories[category] %}
+    <li>
+        [{{ post.date | date_to_string }}]&nbsp;
+        <a class="post-link" style="font-size: 1.1em;" href="{{ site.baseurl }}{{ post.url }}">
+            <!-- <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time></span> -->
+            {{ post.title }}&nbsp;
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+</ul>
+<h4><a class="post-link" style="color:#337ab7;" href="{{ site.url }}{{ site.baseurl }}/pages/category.html">Back</a>
+</h4>

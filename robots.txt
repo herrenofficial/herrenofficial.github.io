@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sehajyang.github.io/sitemap.xml

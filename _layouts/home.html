@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+<div class="home">
+    {% if site.theme_settings.header_text %}
+    <div id="main" class="call-out"
+         style="background-image: url('{{ site.baseurl }}/{{ site.theme_settings.header_text_feature_image }}')">
+        {{ site.theme_settings.header_text }}
+    </div>
+    {% endif %}
+
+    <div class="posts">
+        {% for post in paginator.posts %}
+        <div class="post-teaser">
+            {% if post.thumbnail %}
+            <div class="post-img">
+                <img src="{{ site.baseurl }}/{{ post.thumbnail }}">
+            </div>
+            {% endif %}
+            <span>
+          <header>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+              </a>
+            </h2>
+            <p class="meta home">
+                {{ post.date | date: "%B %-d, %Y" }} <b>{% if post.author %} - {{ post.author }}{% endif %}</b>{% if post.avatar %}<img style="margin-left:10px" src="/{{ post.avatar }}"/>{% endif %}
+            </p>
+          </header>
+          <div class="excerpt">
+<!--              {{ post.excerpt | strip_html | escape }}-->
+               {{ post.content | strip_html | truncatewords: "50","..." }}
+            <p>
+            <a class="button" style="padding:0.1em 0.6em;" href="{{ post.url | prepend: site.baseurl }}">
+              more
+            </a>
+          </p>
+          </div>
+      </span>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if paginator.total_pages != 1 %}
+    <div class="container clearfix mb1 mt4">
+        <ul class="pagination" role="navigation">
+            <!-- 노출 숫자 개수 제한 -->
+            {% if paginator.total_pages <= 5 %}
+                {% assign first = 1 %}
+                {% assign last = paginator.total_pages %}
+            {% else %}
+                {% assign first = paginator.page | minus: 2 %}
+                {% if first < 1 %}
+                    {% assign first = 1 %}
+                {% endif %}
+                {% assign last = first | plus: 4 %}
+                {% if last > paginator.total_pages %}
+                    {% assign last = paginator.total_pages %}
+                {% endif %}
+            {% endif %}
+            <!-- 제한 끝-->
+
+            <!-- 페이지 번호 -->
+            <div class="pagination-meta">
+                <!-- 왼쪽 화살표-->
+                {% if paginator.total_pages > 1 %}
+                    {% if paginator.previous_page %}
+                    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"
+                       class="button">
+                        <i class="fa fa-chevron-left"></i>
+                        {{ site.theme_settings.str_previous_page }}
+                    </a>
+                    {% endif %}
+                {% endif %}
+                <!-- 번호 시작 -->
+                {% for i in (first..last) %}
+                    {% if i == paginator.page %}
+                        <span class="button" style="background-color:#337ab7; color:white">{{ i }}</span>
+                    {% else %}
+                        {% if i != 1 %}
+                        <a href="{{ site.url }}/{{ site.paginate_path | replace: ':num', i }}" class="button">{{ i }}</a>
+                        {% else %}
+                        <a href="{{ site.url }}/" class="button">1</a>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                <!-- 번호끝 -->
+                <!-- 오른쪽화살표 -->
+                {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button">
+                    {{ site.theme_settings.str_next_page }}
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+                {% endif %}
+            </div>
+        </ul>
+    </div>
+    {% endif %}
