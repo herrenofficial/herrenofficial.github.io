@@ -8,8 +8,10 @@ layout: default
         <div class="meta post"><img src="/{{ page.avatar }}"/></div>
         {% endif %}
         <p class="meta">
+            {% if page.author %}<b>{{ page.author }}</b>{% endif %}
+        </p>
+        <p class="meta">
             {{ page.date | date: "%B %-d, %Y" }}
-            {% if page.author %} - {{ page.author }}{% endif %}
         </p>
         {% if page.categories %}
         <p class="meta">
