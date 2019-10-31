@@ -72,7 +72,7 @@ theme_settings:
     tags:
       icon: "tags"
       enabled: true
-  
+
   # Localization strings
   str_follow_on: "Follow on"
   str_rss_follow: "Follow RSS feed"
@@ -102,7 +102,7 @@ paginate_path: "blog/page:num"
 # PORTFOLIO
 collections:
   portfolio:
-    output: false
+    output: true
     permalink: /:collection/:name
 
 # BUILD SETTINGS

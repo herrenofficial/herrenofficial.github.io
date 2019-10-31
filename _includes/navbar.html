@@ -34,31 +34,48 @@
 
         <li class="separator"> | </li>
         <li>
-            <a class="clear category" id="category" href="{{ site.url }}{{ site.baseurl }}/pages/category.html">
-                <i class="fa fa-folder-open" aria-hidden="true"></i>
-                category
+            <a class="clear category" href="{{ site.url }}{{ site.baseurl }}/portfolio">
+                소개
             </a>
         </li>
+
         <li class="separator"> | </li>
         <li>
-            <a class="clear category" href="{{ site.url }}{{ site.baseurl }}/pages/about.html">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                recruit
+            <a class="clear category" href="https://www.herrencorp.com/#joinus">
+                채용공고
             </a>
         </li>
-        
+
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear category" id="category" href="{{ site.url }}{{ site.baseurl }}/pages/category.html">
+                카테고리
+            </a>
+        </li>
+
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear category" href="{{ site.url }}{{ site.baseurl }}/search">
+                검색
+            </a>
+        </li>
+
+        <li class="separator"> | </li>
+        <li>
+            <a class="clear category" href="{{ site.url }}{{ site.baseurl }}/tags">
+                태그
+            </a>
+        </li>
         <!-- Auto Generation of SPECIAL pages in the navbar -->
-        {% for item in site.theme_settings.special_page %}
-          {% if item[1].enabled %}
-            <li class="separator"> | </li>
-            <li>
-                <a class="clear category" href="{{ site.url }}{{ site.baseurl }}/{{ item[1].icon }}">
-                    <i class="fa fa-{{ item[1].icon }}" aria-hidden="true"></i>
-                    {{ item[1].icon }}
-                </a>
-            </li>
-          {% endif %}
-        {% endfor %}
+<!--        {% for item in site.theme_settings.special_page %}-->
+<!--            <li class="separator"> | </li>-->
+<!--            <li>-->
+<!--                <a class="clear category" href="{{ site.url }}{{ site.baseurl }}/{{ item[1].icon }}">-->
+<!--                    {{ item[0].icon }}-->
+<!--                    {{ item[1].icon }}-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        {% endfor %}-->
     </ul>
         
 	</nav>

@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Tower of Hanoi
-img: "assets/img/portfolio/toh.png"
-date: September 2014
+title: 단미샵
+img: "assets/img/service/danmi.png"
 ---
 
 ![image]({{ site.baseurl }}/{{ page.img }})

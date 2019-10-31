@@ -90,7 +90,8 @@
 
 .clear.category {
     *zoom: 1;
-    font-size:1.13em;
+    font-size:1.1em;
+    font-weight: bold;
     &:after {
         clear: both;
     }
