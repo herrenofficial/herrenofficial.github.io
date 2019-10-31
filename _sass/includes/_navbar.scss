@@ -1,6 +1,6 @@
 .site-header {
     //padding-bottom: 1%;
-    padding: 1% 1% 0.5%;
+    padding: 1% 1% 0.3%;
     padding-right: 2%;
     background: #fff;
     display: inline-block;
@@ -21,21 +21,20 @@
     }
 
     .avatar {
-        height: 3em;
-        width: 3em;
+        height: 3.7em;
         float: left;
         margin-top: -13px;
-        border-radius: 0.2em;
-        margin-right: 0.5em;
-        padding: 10px 10px;
-
     }
 
     .site-title {
         float: left;
         font-weight: bold;
-        font-size: 1em;
+        font-size: 1.3em;
         line-height: 1.5;
+    }
+
+    img {
+        padding: 0;
     }
 
     nav {

@@ -1,16 +1,16 @@
 # SITE CONFIGURATION
 baseurl: ""
 url: "https://herrenofficial.github.io"
-title: "헤렌기술 블로그"
+title: "Herren 기술블로그"
 description: "Herren devlog" # used by search engines
 
 
 # THEME-SPECIFIC CONFIGURATION
 theme_settings:
   # Meta
-  title: "헤렌기술 블로그"
-  avatar: assets/img/triangle.svg
-  favicon: assets/favicon.ico
+  title: 기술블로그
+  avatar: assets/img/herren-logo.png
+  favicon: assets/img/herren-icon.png
   gravatar: # Email MD5 hash
 
   # Header and footer text
