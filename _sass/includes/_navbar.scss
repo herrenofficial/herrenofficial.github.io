@@ -54,6 +54,7 @@
             display: inline;
             float: left;
             margin-right: 0.55em;
+            padding-top: 5px;
         }
         a {
             &:hover {
@@ -76,6 +77,20 @@
 .clear {
     *zoom: 1;
 
+    &:after {
+        clear: both;
+    }
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+}
+
+.clear.category {
+    *zoom: 1;
+    font-size:1.13em;
     &:after {
         clear: both;
     }

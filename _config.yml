@@ -2,7 +2,7 @@
 baseurl: ""
 url: "https://herrenofficial.github.io"
 title: "Herren 기술블로그"
-description: "Herren devlog" # used by search engines
+description: # used by search engines
 
 
 # THEME-SPECIFIC CONFIGURATION
@@ -15,8 +15,9 @@ theme_settings:
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <h1>Dev blog</h1>
-     <h4>헤렌기술 블로그</h4>
+     <h2>헤렌기술블로그</h2>
+     <h1>구인중입니다</h1>
+     <button class="button main"><a class="title-button text" href="https://www.herrencorp.com/#joinus">채용공고 보기</a></button>
   header_text_feature_image: assets/img/pexels/being-remote-developer.png
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>

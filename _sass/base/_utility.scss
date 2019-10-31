@@ -39,6 +39,23 @@
     padding: 0.5em 0.75em;
 }
 
+.button.main {
+    border-radius: 0.3em;
+    border: 2px solid white;
+    display: inline-block;
+    margin: 1em 0;
+    padding: 0.5em 0.75em;
+    background-color: rgba(255,255,255,0);
+    &:hover {
+        background: rgba(255,255,255,0.5);
+    }
+}
+
+.title-button.text {
+    font-family: 'Gothic A1', sans-serif;
+    color: white;
+}
+
 a.button {
     @extend .button-link;
 }
