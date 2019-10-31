@@ -24,10 +24,10 @@
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-imagemin": "^6.1.1",
-    "gulp-less": "^3.5.0",
+    "gulp-less": "^4.0.1",
     "gulp-replace": "^1.0.0",
-    "gulp-shell": "^0.6.5",
-    "gulp-uglify": "^3.0.0"
+    "gulp-shell": "^0.7.1",
+    "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
     "jekyll": "^3.0.0-beta1"
