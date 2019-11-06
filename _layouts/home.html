@@ -26,7 +26,7 @@ layout: default
               </a>
             </h2>
             <p class="meta home">
-                {{ post.date | date: "%B %-d, %Y" }} <b>{% if post.author %} - {{ post.author }}{% endif %}</b>{% if post.avatar %}<img style="margin-left:10px" src="/{{ post.avatar }}"/>{% endif %}
+                {{ post.date | date: "%Y/%m/%d " }} <b>{% if post.author %} - {{ post.author }}{% endif %}</b>{% if post.avatar %}<img style="margin-left:10px" src="/{{ post.avatar }}"/>{% endif %}
             </p>
           </header>
           <div class="excerpt">

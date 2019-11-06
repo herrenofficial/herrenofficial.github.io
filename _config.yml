@@ -15,8 +15,8 @@ theme_settings:
 
   # Header and footer text
   header_text: > #two or three lines to describe your site
-     <h2>헤렌기술블로그</h2>
-     <h1>테스트중입니다</h1>
+     <h2>헤렌 기술블로그</h2>
+     <h1>헤렌과 함께하실 분을 찾습니다</h1>
      <button class="button main"><a class="title-button text" href="https://www.herrencorp.com/#joinus">채용공고 보기</a></button>
   header_text_feature_image: assets/img/pexels/being-remote-developer.png
   footer_text: >
