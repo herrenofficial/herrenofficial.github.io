@@ -57,7 +57,10 @@
 }
 
 a.button {
-    @extend .button-link;
+    &:hover {
+        border: 1px solid $link-color;
+        text-decoration: none;
+    }
 }
 
 .button-link {
