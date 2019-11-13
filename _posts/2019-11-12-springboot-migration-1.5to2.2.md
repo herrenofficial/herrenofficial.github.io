@@ -1,6 +1,6 @@
 ---
 layout: post
-title: springboot 1.5 -> 2.2로 버전 업그레이드
+title: springboot 1.5 -> 2.2로 버전 업그레이드 하는 법
 date : 2019/11/12
 avatar: "assets/img/profile/seha.jpg"
 categories : [Springboot]
@@ -58,7 +58,7 @@ springBootVersion = '2.2.0.RELEASE'
 
 ### 4. 라이브러리 교체와 클래스 변경
 컴파일 오류가 발생했다면 해당되는 오류를 고칩니다.   
-보통은 사용하던 서드파티 라이브러리가 deprecated 되어 대체 후 오류가 나는 경우가 많습니다. 
+보통은 사용하던 서드파티 라이브러리가 deprecated 되어 대체 후 오류가 나는 경우가 많습니다.  
 (ex:log4j 지원중단으로 log4j2로 고쳤습니다. 따라서 프로젝트에 사용중이던 logger -> log 로 변경되었습니다)  
 버전 업그레이드로 인한 특정 라이브러리 설정의 변화로 발생하는 오류를 해결하는 방법은 다음의 링크에서 확인하실 수 있습니다.
 * [common-application-properties](https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html)
@@ -70,12 +70,12 @@ springBootVersion = '2.2.0.RELEASE'
 
 또한 몇가지 클래스및 패키지가 변경되었습니다.  
 예를들어:  
->WebMvcConfigurerAdapter deprecated로 인한 변경
-기존 : extends WebMvcConfigurerAdapter
+>WebMvcConfigurerAdapter deprecated로 인한 변경  
+기존 : extends WebMvcConfigurerAdapter  
 변경 : implements WebMvcConfigurer
 
->SpringBootServletInitializer 패키지 이름의 변경
-기존 : import org.springframework.boot.web.support.SpringBootServletInitializer;
+>SpringBootServletInitializer 패키지 이름의 변경  
+기존 : import org.springframework.boot.web.support.SpringBootServletInitializer;  
 변경 : import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 위와 같은 클래스 및 패키지가 변경되었습니다.  
@@ -91,12 +91,13 @@ IDE에서 해당 키워드에 warning 표시를 나타내며 제안에 따라 �
 해당 변경은 2.1의 릴리즈 노트에서 다음과같이 소개하고 있습니다.[[링크]](https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.1-Release-Notes#bean-overriding)
 >Bean overriding has been disabled by default to prevent a bean being accidentally overridden. If you are relying on overriding, you will need to set spring.main.allow-bean-definition-overriding to true.
 
-2.1 버전부터 빈의 우연한 재정의를 방지하기위해 default가 false 라고 합니다. 따라서, __been overriding을 사용하려면 true로 명시__해줘야 합니다.    
+2.1 버전부터 빈의 우연한 재정의를 방지하기위해 default가 false 라고 합니다.  
+따라서, **been overriding을 사용하려면 true로 명시**해야 합니다.    
 명시가 되어있지 않은 경우 다음과 같은 오류가 발생합니다.
 ```java
 org.springframework.beans.factory.support.Bean Definition Override Exception
 ```
-따라서 application.properties에 bean overriding을 허용하는 부분을 추가합니다.
+따라서 다음과 같이 application.properties에 bean overriding을 허용하는 부분을 추가합니다.
 ```java
 spring.main.allow-bean-definition-overriding=true
 ```
@@ -140,8 +141,9 @@ Lombok, Gradle, JPA 문제등은 [[honeymon 님의 스프링 부트 2.x 준비�
 
 ## 마치며
 공비서는 이렇게 1.5 -> 2.2로의 마이그레이션을 마쳤습니다.  
-아직 2.2 버전은 릴리즈한지 git s오래되지않아 마이그레이션에 대한 자료도 적으며 이슈도 많았습니다.  
+아직 2.2 버전은 릴리즈한지 오래되지않아 마이그레이션에 대한 자료도 적으며 이슈도 많았습니다.  
 하지만 2.2 버전으로 올라가며 [초당 처리량 20~30% 증가](https://www.slideshare.net/Pivotal/spring-boot-22), jUnit5 등등의 장점때문에 마이그레이션을 결심하게 되었습니다.  
+우여곡절이 많았지만, 이 포스팅의 마이그레이션 하는 과정을 하나하나 따라하다보면 보다 쉽게 마이그레이션을 마칠수 있을거라 생각합니다.
 
 읽어주셔서 감사합니다 :)
 
