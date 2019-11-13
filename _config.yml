@@ -46,7 +46,7 @@ theme_settings:
   vimeo:
   wordpress:
   youtube:
-  
+
   # Sharing options
   share_buttons:
     facebook: true
@@ -60,13 +60,13 @@ theme_settings:
     wordpress:
     email: true
 
-  # Scripts / Features 
+  # Scripts / Features
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
+  disqus_shortname: "https-herrenofficial-github-io"
   katex: true # Enable if using math markup
-  
+
   special_page:
-    search: 
+    search:
       icon: "search" # Assuming page link and icon are the same
       enabled: true
     tags:
@@ -94,7 +94,7 @@ theme_settings:
 
   # Post navigation
   post_navigation: true
-  
+
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
