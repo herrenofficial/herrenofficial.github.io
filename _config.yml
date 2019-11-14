@@ -18,13 +18,13 @@ theme_settings:
      <h2>헤렌 기술블로그</h2>
      <h1>헤렌과 함께하실 분을 찾습니다</h1>
      <button class="button main"><a class="title-button text" href="https://www.herrencorp.com/#joinus">채용공고 보기</a></button>
-  header_text_feature_image: assets/img/pexels/being-remote-developer.png
+  header_text_feature_image: assets/img/pexels/achievement.jpg
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a> with <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
   # Icons
   rss: true  # Make sure you created a feed.xml with feed.xml layout
-  email_address:
+  email_address: "herrencorp@gmail.com"
   behance:
   bitbucket:
   dribbble:
@@ -33,7 +33,7 @@ theme_settings:
   gitlab:
   github: "herrenofficial"
   google_plus:
-  instagram:
+  instagram: "gongbiz_s"
   keybase:
   linkedin:
   pinterest:
