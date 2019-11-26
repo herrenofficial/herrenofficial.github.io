@@ -61,7 +61,7 @@ theme_settings:
     email: true
 
   # Scripts / Features
-  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  google_analytics: "UA-153409917-1"
   disqus_shortname: "https-herrenofficial-github-io"
   katex: true # Enable if using math markup
 
