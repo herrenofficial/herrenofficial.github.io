@@ -158,6 +158,11 @@ Prometheus와 Grafana는 모두 설치했습니다.
     ![](/assets/img/post/prometheus-with-grafana-1/SULL0a4.png)
     
     PromQL의 유연한 기능 덕분에 매우 손쉽게 시계열 평균을 구할 수 있었습니다. 
+    
+    사용한 코드는 다음과 같습니다:
+    ```PromQL
+    avg by (exported_job) (node_memory_MemFree_bytes{job="pushgateway", exported_job="crew_prod"})
+    ```
 
 
 ## rabbitmq_exporter로 rabbitmq 수집하기
