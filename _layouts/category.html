@@ -4,8 +4,8 @@ layout: post
 <ul>
     {% assign categories_list = site.categories %}
     {% for category in categories_list %}
-    <a class="button" href="{{ site.url }}{{ site.baseurl }}/category/{{ category[0] | capitalize }}.html">{{
-        category[0] | capitalize }} ({{ category[1].size }})</a></li>
+    <a class="button" href="{{ site.url }}{{ site.baseurl }}/category/{{ category[0] }}.html">{{
+        category[0] }} ({{ category[1].size }})</a></li>
     {% endfor %}
     {% assign categories_list = nil %}
 
