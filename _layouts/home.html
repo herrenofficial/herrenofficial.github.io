@@ -12,6 +12,7 @@ layout: default
 
     <div class="posts">
         {% for post in paginator.posts %}
+        {% assign author = site.authors | where: 'name', post.author | first %}
         <div class="post-teaser">
             {% if post.thumbnail %}
             <div class="post-img">
@@ -26,7 +27,7 @@ layout: default
               </a>
             </h2>
             <p class="meta home">
-                {{ post.date | date: "%Y/%m/%d " }} <b>{% if post.author %} - {{ post.author }}{% endif %}</b>{% if post.avatar %}<img style="margin-left:10px" src="/{{ post.avatar }}"/>{% endif %}
+                {{ post.date | date: "%Y/%m/%d " }} <b>{% if post.author %} - <a href="{{ author.blog }}">{{ post.author }}</a> {% endif %}</b>{% if post.avatar %}<img style="margin-left:10px" src="/{{ post.avatar }}"/>{% endif %}
             </p>
           </header>
           <div class="excerpt">

@@ -1,5 +1,6 @@
 ---
 layout: post
+author: seha
 title: springboot 1.5 -> 2.2로 버전 업그레이드 하는 법
 date : 2019/11/12
 avatar: "assets/img/profile/seha.jpg"

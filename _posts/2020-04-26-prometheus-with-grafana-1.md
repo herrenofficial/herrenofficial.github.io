@@ -1,5 +1,6 @@
 ---
 layout: post
+author: yun
 title: Prometheus + Grafana로 모니터링하기 (1)
 date : 2020/04/26
 avatar: "assets/img/profile/yun.jpg"
