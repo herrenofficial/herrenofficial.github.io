@@ -4,7 +4,7 @@ title: Prometheus + Grafana로 모니터링하기 (1)
 date : 2020/04/26
 avatar: "assets/img/profile/yun.jpg"
 categories : [DevOps]
-description: tasdfadfads
+description: 최근에 프로젝트 전반에 걸쳐 모니터링 시스템을 개편하면서 사용하게 된 Prometheus와 Grafana에 대해 소개해보려 합니다!
 comments: true
 tags: 
 - Prometheus
